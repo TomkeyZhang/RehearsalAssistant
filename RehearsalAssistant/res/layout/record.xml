@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+	<TextView
+	android:id="@+id/record_instructions"
+	android:layout_alignParentTop="true"
+	android:layout_width="fill_parent" 
+	android:layout_height="wrap_content" 
+	android:paddingLeft="7dip"
+	android:paddingRight="7dip"
+	android:text="@string/recording_instructions"
+	/>
+	<RelativeLayout
+	android:id="@+id/current_time_frame"
+	android:layout_alignParentBottom="true"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+	android:layout_marginLeft="5dip" android:layout_marginRight="5dip">
+		<TextView
+	    android:id="@+id/current_time"
+		android:background="@android:drawable/btn_default"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:singleLine="true"
+	    android:text="00:00:00"
+	    android:gravity="center"
+		android:textAppearance="?android:attr/textAppearanceButton"
+		    android:textSize="40dip"
+		/>
+		<ImageView
+		android:id="@+id/left_record_indicator"
+		android:layout_alignBottom="@id/current_time"
+		android:layout_alignTop="@id/current_time"
+		android:layout_alignLeft="@id/current_time"
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:src="@drawable/media_recording"
+    	android:scaleType="center" android:visibility="invisible"
+    	android:layout_marginLeft="10dip"
+   		android:layout_marginBottom="6dip"
+    	/>
+		<ImageView
+		android:id="@+id/right_record_indicator"
+		android:layout_alignBottom="@id/current_time"
+		android:layout_alignTop="@id/current_time"
+		android:layout_alignRight="@id/current_time"
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:src="@drawable/media_recording"
+		android:layout_marginRight="10dip"
+		android:layout_marginBottom="6dip"
+    	android:scaleType="center" android:visibility="invisible"/>
+		</RelativeLayout>
+	<FrameLayout
+    android:layout_above="@+id/current_time_frame"
+    android:layout_below="@id/record_instructions"
+    android:layout_width="fill_parent" 
+	android:layout_height="fill_parent"
+	android:layout_marginLeft="5dip" android:layout_marginRight="5dip">
+		<Button android:id="@+id/button"
+	    android:layout_width="fill_parent" 
+	    android:layout_height="fill_parent"
+	    android:text="@string/start_session"
+		android:textAppearance="?android:attr/textAppearanceLargeInverse"
+	    android:textSize="40dip"
+	    android:clickable="false"
+	    />
+	    <FrameLayout
+  		    android:layout_width="fill_parent" 
+		    android:layout_height="fill_parent"
+		    android:paddingLeft="5px"
+		    android:paddingRight="5px"
+		    android:paddingBottom="5px"
+		    android:paddingTop="3px"
+		    android:layout_margin="0px"
+		   >
+					<ImageView android:id="@+id/record_button_image"
+					android:layout_alignParentTop="true"
+					android:layout_alignParentLeft="true"
+					android:layout_width="fill_parent"
+					android:layout_height="fill_parent"
+					android:src="@drawable/grayscale_masks"
+					android:padding="0px"
+			    	android:layout_margin="0px"
+				    android:background="#1F000000"			    	
+			    	android:scaleType="centerCrop"/>				
+			
+		</FrameLayout>
+	</FrameLayout>
+</RelativeLayout>

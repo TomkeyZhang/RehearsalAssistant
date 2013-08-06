@@ -1,0 +1,18 @@
+<PreferenceScreen  
+     xmlns:android="http://schemas.android.com/apk/res/android">
+     <CheckBoxPreference android:key="launch_with_last_project" android:defaultValue="true" android:title="@string/launch_with_last_project" android:summary="@string/launch_with_last_project_sum"></CheckBoxPreference>
+     <CheckBoxPreference android:key="confirm_individual_deletion" android:title="@string/confirm_individual_deletion" android:summary="@string/confirm_individual_deletion_sum" android:defaultValue="true"></CheckBoxPreference>
+     <CheckBoxPreference android:key="recording_waveform" android:title="@string/recording_waveform" android:defaultValue="true" android:summary="@string/recording_waveform_sum"></CheckBoxPreference>
+     <CheckBoxPreference android:key="playback_panel_enabled" android:disableDependentsState="false" android:defaultValue="true" android:summary="@string/playback_panel_enabled_sum" android:title="@string/playback_panel_enabled"/>  
+ 	 <CheckBoxPreference android:key="playback_panel_disappears" android:dependency="playback_panel_enabled" android:defaultValue="false" android:title="@string/playback_panel_disappears" android:summary="@string/playback_panel_disappears_sum"></CheckBoxPreference>
+	 
+<PreferenceCategory android:title="@string/recording_quality_settings"><CheckBoxPreference android:key="uncompressed_recording" android:defaultValue="false" android:title="@string/set_uncompressed_recording" android:summary="@string/set_uncompressed_recording_sum"></CheckBoxPreference><ListPreference android:entries="@array/sample_rate_strings" android:entryValues="@array/sample_rate_values" android:key="uncompressed_recording_sample_rate" android:title="@string/uncompressed_recording_sample_rate" android:summary="@string/uncompressed_recording_sample_rate_sum" android:dependency="uncompressed_recording" android:defaultValue="0"></ListPreference><CheckBoxPreference android:key="screen_bright_wake_lock" android:title="@string/screen_bright_wake_lock_setting" android:summary="@string/screen_bright_wake_lock_setting_summary" android:defaultValue="false"></CheckBoxPreference>
+
+</PreferenceCategory><PreferenceCategory android:title="@string/email_settings">
+	<CheckBoxPreference android:key="email_detail" android:title="@string/email_detail" android:defaultValue="true" android:summary="@string/email_detail_sum"></CheckBoxPreference>
+	<EditTextPreference android:key="email_to" android:title="@string/email_to_setting" android:summary="@string/email_to_setting_summary"></EditTextPreference>
+	<EditTextPreference android:key="email_subject" android:title="@string/email_subject_setting" android:summary="@string/email_subject_setting_summary"></EditTextPreference>
+</PreferenceCategory>
+
+</PreferenceScreen> 
+

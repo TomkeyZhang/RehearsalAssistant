@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+<TextView
+    android:id="@+id/playback_instructions"
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content"
+	android:layout_alignParentTop="true"
+    android:paddingLeft="7dip"
+	android:paddingRight="7dip"
+    android:text="@string/playback_instructions"
+    />
+<TextView
+    android:id="@+id/playback_time"
+	android:layout_alignParentBottom="true"
+    android:layout_width="fill_parent"
+   	android:layout_height="wrap_content"
+    android:singleLine="true"
+    android:gravity="center"
+	android:textAppearance="?android:attr/textAppearanceButton"
+	android:background="@android:drawable/btn_default"
+	android:textSize="40dip"
+    android:text="00:00:00"
+    />
+<FrameLayout
+	android:layout_height="fill_parent" 
+	android:layout_width="fill_parent" 
+    android:layout_below="@+id/playback_instructions"
+    android:layout_above="@id/playback_time"
+	android:background="@drawable/masks_gradient" android:layout_marginLeft="5dip" android:layout_marginRight="5dip">
+	<ImageView
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:src="@drawable/red_masks"
+		android:scaleType="center"
+	/>
+	<urbanstew.RehearsalAssistant.IndicatingListView android:id="@+id/annotation_list"
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content" 
+	    android:background="#7F000000"
+	/>
+	<TextView android:id="@+id/no_annotations"
+	    android:layout_width="fill_parent" 
+	    android:layout_height="fill_parent"
+	    android:gravity="center"
+	    android:paddingLeft="7dip"
+		android:paddingRight="7dip"
+		android:background="#7F000000"
+	    android:textAppearance="?android:attr/textAppearanceLarge"
+	/>
+</FrameLayout>
+</RelativeLayout>

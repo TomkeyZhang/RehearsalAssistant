@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal">
+	
+		<ImageButton android:id="@+id/playback_previous"
+		    android:layout_width="wrap_content" 
+		    android:layout_height="wrap_content"
+		    android:src="@android:drawable/ic_media_previous"
+		    android:paddingLeft="0.15in"
+		    android:paddingRight="0.15in"
+		/>
+		<ImageButton android:id="@+id/playback_pause"
+		    android:layout_width="wrap_content" 
+		    android:layout_height="wrap_content"
+		    android:src="@android:drawable/ic_media_pause"
+		    android:paddingLeft="0.15in"
+		    android:paddingRight="0.15in"
+		/>
+		<ImageButton android:id="@+id/playback_next"
+		    android:layout_width="wrap_content" 
+		    android:layout_height="wrap_content"
+		    android:src="@android:drawable/ic_media_next"
+		    android:paddingLeft="0.15in"
+		    android:paddingRight="0.15in"
+		/>
+	</LinearLayout>
+	<RelativeLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:paddingLeft="3dip"
+	    android:paddingRight="3dip"
+	    	
+	>
+		<TextView
+			android:id="@+id/playback_current_time"
+		    android:layout_width="wrap_content" 
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:textAppearance="?android:attr/textAppearanceSmall"
+		/>
+		<TextView
+			android:id="@+id/playback_file_size"
+		    android:layout_width="fill_parent" 
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentTop="true"
+			android:gravity="center"
+		    android:textAppearance="?android:attr/textAppearanceSmall"
+		/>
+		<TextView
+			android:id="@+id/playback_length"
+		    android:layout_width="wrap_content" 
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentRight="true"
+		    android:textAppearance="?android:attr/textAppearanceSmall"
+		/>
+	</RelativeLayout>
+	<SeekBar
+		android:id="@+id/playback_seek"
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content"
+	    android:paddingLeft="3dip"
+	    android:paddingRight="3dip"
+	    android:max="1024"
+		style="android:progressBarStyleHorizontal"/>
+</LinearLayout>
